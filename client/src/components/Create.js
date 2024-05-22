@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createProduct } from "../api/productCreateApi";
-import { API_HOST } from "../api/config";
 
 const Create = () => {
   const navigate = useNavigate();
@@ -39,7 +38,7 @@ const Create = () => {
 
   const handleMoveListPage = () => {
     setIsModalOpen(false);
-    navigate(`${API_HOST}`);
+    navigate("/product");
   };
 
   if (isLoading) {
