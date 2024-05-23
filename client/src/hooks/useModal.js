@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const useModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const [confirmAction, setConfirmAction] = useModal(null);
+  const [confirmAction, setConfirmAction] = useState(null);
 
   const openModal = ({ message, onConfirm }) => {
     setModalMessage(message);

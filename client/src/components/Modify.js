@@ -5,7 +5,7 @@ import {
   getProductOne,
   modifyProduct,
 } from "../api/productModifyApi";
-import useModal from "../hook/useModal";
+import useModal from "../hooks/useModal";
 import Modal from "./common/Modal";
 
 const initState = {
