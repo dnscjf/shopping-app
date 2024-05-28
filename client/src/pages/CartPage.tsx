@@ -1,7 +1,7 @@
 import React from "react";
 import CartList from "../components/cart/CartList";
 
-const Cartpage = () => {
+const CartPage = () => {
   return (
     <div>
       <h1>장바구니 페이지입니다.</h1>
@@ -10,4 +10,4 @@ const Cartpage = () => {
   );
 };
 
-export default Cartpage;
+export default CartPage;

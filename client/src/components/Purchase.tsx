@@ -5,9 +5,11 @@ import { useNavigate } from "react-router-dom";
 
 const Purchase = () => {
   const navigate = useNavigate();
+
   const { isModalOpen, modalMessage, confirmAction, openModal, closeModal } =
     useModal();
-  const handleSubmit = e => {
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     openModal({
@@ -48,7 +50,8 @@ const Purchase = () => {
         isOpen={isModalOpen}
         message={modalMessage}
         onClose={closeModal}
-        onConfirm={confirmAction}
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        onConfirm={confirmAction || (() => {})}
       />
     </div>
   );

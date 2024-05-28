@@ -1,6 +1,14 @@
 import React from "react";
+import Button from "./Button";
 
-const Modal = ({ isOpen, message, onClose, onConfirm }) => {
+interface Props {
+  isOpen: boolean;
+  message: string;
+  onClose: () => void;
+  onConfirm: () => void;
+}
+
+const Modal = ({ isOpen, message, onClose, onConfirm }: Props) => {
   if (!isOpen) return null;
 
   return (
@@ -26,8 +34,8 @@ const Modal = ({ isOpen, message, onClose, onConfirm }) => {
         }}
       >
         <p>{message}</p>
-        <button onClick={onConfirm}>확인</button>
-        <button onClick={onClose}>취소</button>
+        <Button label="확인" onClick={onConfirm} />
+        <Button label="취소" onClick={onClose} />
       </div>
     </div>
   );

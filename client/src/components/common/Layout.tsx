@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
+import { ReactNode } from "react";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigate = useNavigate();
   const { carts } = useCart();
 
